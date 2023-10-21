@@ -176,11 +176,15 @@ export default defineConfig({
     open: true,
     https: false,
     proxy: {
+      // target，为实际的后端 URL，它会追加到属性名配置的 /api 这个片段的前面，
+      // 例如访问 /api/some_end_point会转换为 http://localhost:9999/api/some_end_point。
+      // 所以需要 rewrite：把请求的 URL 进行重写
       '/api': {
         // target: "http://192.168.10.169",
-        // target: "http://localhost:9999",  // 本地
-        target: 'https://heitao911.github.io:9999', // github action
-        changeOrigin: true
+        target: "http://localhost:9999",  // 本地
+        // target: 'https://heitao911.github.io:9999', // github action
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
       }
     }
   }
