@@ -31,7 +31,7 @@ jobs:
           # always-auth: # optional, default is false
           # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
           # node-version: # optional
-          node-version: '>=10.15.0'
+          node-version: '20.0.0'
           # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
           # architecture: # optional
           # Set this option if you want the action to check for the latest available version that satisfies the version spec
@@ -44,8 +44,8 @@ jobs:
           # token: # optional, default is ${{ github.token }}
           # Deprecated. Use node-version instead. Will not be supported after October 1, 2019
           # version: # optional
-      - name: 'start server(启动正向代理!!)'
-        run: node server/server.js
+      # - name: 'start server(启动正向代理!!)'
+          run: node server/server.js
 
       - name: End Console
         run: echo node server run successful!
