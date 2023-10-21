@@ -181,8 +181,8 @@ export default defineConfig({
       // 所以需要 rewrite：把请求的 URL 进行重写
       '/api': {
         // target: "http://192.168.10.169",
-        target: "http://localhost:9999",  // 本地
-        // target: 'https://heitao911.github.io:9999', // github action
+        // target: "http://localhost:9999",  // 本地
+        target: 'https://heitao911.github.io:9999', // github action
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       }
