@@ -22,7 +22,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/ht/',
   publicPath: '/',
   plugins: [
     vue(),
@@ -178,8 +178,8 @@ export default defineConfig({
     proxy: {
       '/api': {
         // target: "http://192.168.10.169",
-        // target: "http://localhost:9999",
-        target: 'https://heitao911.github.io:9999',
+        // target: "http://localhost:9999",  // 本地
+        target: 'https://heitao911.github.io:9999', // github action
         changeOrigin: true
       }
     }
