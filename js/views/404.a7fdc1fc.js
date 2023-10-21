@@ -1,0 +1,1 @@
+import{as as a,q as s,y as t}from"../index.442e9d7b.js";const o={class:"NOINfo"};const c=a({data:()=>({})},[["render",function(a,c,d,e,n,r){return s(),t("div",o)}],["__scopeId","data-v-676cc814"]]);export{c as default};
