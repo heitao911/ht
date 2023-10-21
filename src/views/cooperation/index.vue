@@ -76,6 +76,7 @@
 import { useChannelStore } from '@/stores/channel'
 import { useHandlePages } from '@/hooks/usePagination'
 import { getTimeAgo } from '@/utils/tools'
+import config from '@/common/config.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -187,7 +188,8 @@ const getRegion = (obj) => {
 }
 
 const toDetail = (row) => {
-  window.open('/#/cooperation/cooperationDetail?id=' + row.id, '_blank')
+  const jumpUrl = window.location.href.includes('github.io') ? config.onlineOrigin : window.location.origin
+  window.open(jumpUrl + '/#/cooperation/cooperationDetail?id=' + row.id, '_blank')
   // router.push({ name: 'cooperationDetail' })
 }
 

@@ -1,3 +1,6 @@
+const onlineOrigin = 'https://heitao911.github.io/ht'
+
+
 /**
  * 飞机账号：三种类型
   @sir1685, sir1685, https://t.me/sir1685
@@ -37,6 +40,7 @@ const black_U_whiteName = ['TJhegqYzh54DFfVB3dXrxufEDXbM26NJy1'] // 名骗子地
 const bannerAd = []
 
 export default {
+  onlineOrigin,
   service_whiteName,
   vip_whiteName,
   black_whiteName,

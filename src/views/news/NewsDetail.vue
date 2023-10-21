@@ -54,6 +54,7 @@
 <script setup name="NewsDetail">
 import { apiGetContentDetail, apiGetHotspotContent } from '@/api/index.js'
 import { replaceText, getTimeAgo } from '@/utils/tools'
+import config from '@/common/config.js'
 
 const route = useRoute()
 const detailData = ref({})
@@ -99,6 +100,7 @@ const getHotspotContent = async () => {
   }
 }
 const toDetail = (item) => {
+  const jumpUrl = window.location.href.includes('github.io') ? config.onlineOrigin : window.location.origin
   window.open('/#/news/newsDetail/' + item.id, '_blank')
 }
 </script>

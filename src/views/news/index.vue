@@ -72,6 +72,7 @@
 import { useHandlePages } from '@/hooks/usePagination'
 import { apiGetNewsBanner, apiGetNewsCategory, apiGetHotspotContent, apiGetNewsList } from '@/api/index.js'
 import { replaceText } from '@/utils/tools'
+import config from '@/common/config.js'
 
 const state = reactive({
   activeTab: '-1',
@@ -157,7 +158,8 @@ const requestData = async (key) => {
 const { pageData, handlePageChange, handleSizeChange } = useHandlePages(requestData)
 
 const toDetail = (id) => {
-  window.open('/#/news/newsDetail/' + id, '_blank')
+  const jumpUrl = window.location.href.includes('github.io') ? config.onlineOrigin : window.location.origin
+  window.open(jumpUrl + '/#/news/newsDetail/' + id, '_blank')
 }
 defineExpose({ requestData })
 
